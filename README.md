@@ -61,9 +61,9 @@ If you encounter errors during installation or runtime, ensure that your environ
 - **Inatall Visual C++ Build Tools (Windows)**:
   CMake requires a C++ compiler to build libraries like dlib. For Windows users, you can install the Visual C++ Build Tools:
 
-Download the installer from [Microsoft](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
+- Download the installer from [Microsoft](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
 
-During installation, ensure you select the C++ Build Tools workload.
+- During installation, ensure you select the C++ Build Tools workload.
 
 - **Check Dependencies**:
   Verify that all required libraries are installed by running:
