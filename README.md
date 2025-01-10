@@ -41,6 +41,30 @@ Dlib is a machine learning library used by `face_recognition` for facial recogni
 LibertyTrack ensures that only verified changes are applied to inmate data by using facial recognition technology.
 
 ---
+## Troubleshooting
+If you encounter errors during installation or runtime, ensure that your environment variables are correctly set up:
+
+- **Check Python Path**:
+  Ensure that Python is added to your system's PATH.
+  ```bash
+  python --version
+  ```
+  If this command fails, add Python to your PATH.
+
+- **Check CMake Path**:
+  Ensure that CMake is accessible via the terminal/command prompt.
+  ```bash
+  cmake --version
+  ```
+  If this command fails, add CMake to your PATH.
+
+- **Check Dependencies**:
+  Verify that all required libraries are installed by running:
+  ```bash
+  pip list
+  ```
+
+---
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
