@@ -1,0 +1,30 @@
+<noscript id="print-header">
+    <div style="text-align: center; margin-bottom: 10px; position: relative;">
+        <p style="margin: 5px 0;"><b>NATIONAL POLICE COMMISSION</b></p>
+        <p style="margin: 5px 0; position: relative;">
+            <img src="img/pnp_logo.png" style="width: 60px; position: absolute; left: 0; top: -10;">
+            <b>PHILIPPINE NATIONAL POLICE CAPITAL REGION POLICE OFFICE</b>
+            <img src="img/police-logo.png" style="width: 75px; position: absolute; right: 0; top: -10;">
+        </p>
+        <p style="margin: 5px 0;"><b>MANILA POLICE DISTRICT</b></p>
+        <p style="margin: 5px 0;"><b>MORIONES POLICE STATION (PS-2)</b></p>
+        <p>J. Nolasco corner Morga Sts. Tondo, Manila</p>
+        <p style="margin: 5px 0;"><?= date("F j, Y") ?></p>
+    </div>
+</noscript>
+
+
+   <noscript id="print-header">
+        <div class="text-center mb-2 relative">
+            <p class="my-1 mx-0"><b>NATIONAL POLICE COMMISSION</b></p>
+            <p class="my-1 mx-0 relative">
+                <img src="img/pnp_logo.png" class="w-16 absolute left-0 -top-2">
+                <b>PHILIPPINE NATIONAL POLICE CAPITAL REGION POLICE OFFICE</b>
+                <img src="img/police-logo.png" class="w-20 absolute right-0 -top-2">
+            </p>
+            <p class="my-1 mx-0"><b>MANILA POLICE DISTRICT</b></p>
+            <p class="my-1 mx-0"><b>MORIONES POLICE STATION (PS-2)</b></p>
+            <p>J. Nolasco corner Morga Sts. Tondo, Manila</p>
+            <p class="my-1 mx-0" id="report-date"></p>
+        </div>
+    </noscript>

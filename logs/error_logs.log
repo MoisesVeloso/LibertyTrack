@@ -1,0 +1,8 @@
+[13-Nov-2024 15:44:35 Europe/Berlin] [2024-11-13 15:44:35] Error: Missing required fields
+[13-Nov-2024 15:45:20 Europe/Berlin] [2024-11-13 15:45:20] Error: Missing required fields
+[13-Nov-2024 15:49:46 Europe/Berlin] [2024-11-13 15:49:46] Error: Missing required fields. Inmate ID: , Activity Type: asdasd, Location: Manila
+[13-Nov-2024 15:51:26 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'libertytrack.logs' doesn't exist in C:\xampp\htdocs\LibertyTrack\controllers\addLog.php:24
+Stack trace:
+#0 C:\xampp\htdocs\LibertyTrack\controllers\addLog.php(24): mysqli->prepare('INSERT INTO log...')
+#1 {main}
+  thrown in C:\xampp\htdocs\LibertyTrack\controllers\addLog.php on line 24

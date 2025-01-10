@@ -1,0 +1,31 @@
+import sys
+import face_recognition
+import os
+
+def verify_face(image_data_path, input_image_path):
+    known_face_encodings = []
+    for filename in os.listdir(image_data_path):
+        if filename.endswith(('.jpg', '.png', '.jpeg')): 
+            image_path = os.path.join(image_data_path, filename)
+            image = face_recognition.load_image_file(image_path)
+            encoding = face_recognition.face_encodings(image)
+            if encoding:
+                known_face_encodings.append(encoding[0])
+
+    print(f"Loaded {len(known_face_encodings)} known face encodings.")  # Debugging line
+
+    input_image = face_recognition.load_image_file(input_image_path)
+    input_encoding = face_recognition.face_encodings(input_image)
+
+    if input_encoding:
+        matches = face_recognition.compare_faces(known_face_encodings, input_encoding[0])
+        print(f"Matches found: {matches}")  # Debugging line
+        return any(matches)
+    return False
+
+if __name__ == "__main__":
+    image_data_path = sys.argv[1]
+    input_image_path = sys.argv[2]
+
+    result = verify_face(image_data_path, input_image_path)
+    print("True" if result else "False")

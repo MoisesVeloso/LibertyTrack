@@ -1,0 +1,17 @@
+-Additional (Add Inmate Fields)
+	Arresting officers
+	IOC ()
+	Address of inmate
+	Date and Time Arrested
+
+-Change (Events)
+	Activities for Events:
+	Video conference
+	Produce Order
+
+-Additional Under Modify Button of Inmates List
+	- Transfer > Commit to other facilities
+
+- visitor verification (capture image)
+- search bar sa visitors and inmates
+- name filtering sa reports

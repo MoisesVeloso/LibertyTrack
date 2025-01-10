@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="form-control">
+  <label class="cursor-pointer label">
+    <input type="checkbox" class="checkbox checkbox-info" />
+    <span class="label-text">Remember me</span>
+  </label>
+</div>
+ 
+<div class="relative">
+    <button onclick="toggleDropdown()" class="input input-bordered input-info flex items-center gap-2 font-semibold bg-neutral-200 w-full">
+        Case: <span id="selectedCases" class="text-sm"></span>
+    </button>
+    
+    <div id="caseSelect" class="absolute hidden w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-96 overflow-y-auto z-50">
+        <div class="p-2">
+            <strong class="block py-1">Crimes Against Fraud</strong>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Identity Theft"> Identity Theft</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Phishing and Online Scams"> Phishing and Online Scams</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Credit Card Fraud"> Credit Card Fraud</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Bank Fraud"> Bank Fraud</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Investment Scams"> Investment Scams</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Insurance Fraud"> Insurance Fraud</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Corruption and Bribery"> Corruption and Bribery</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Embezzlement"> Embezzlement</label>
+        </div>
+        
+        <div class="p-2 border-t">
+            <strong class="block py-1">Drug-Related Crimes</strong>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Drug Trafficking"> Drug Trafficking</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Drug Possession"> Drug Possession</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Drug Use"> Drug Use</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Manufacturing of Drugs"> Manufacturing of Drugs</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Drug Smuggling"> Drug Smuggling</label>
+        </div>
+        
+        <div class="p-2 border-t">
+            <strong class="block py-1">Crimes Against Property</strong>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Theft"> Theft</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Burglary"> Burglary (Akyat-Bahay)</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Robbery"> Robbery</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Car Theft"> Car Theft</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Vandalism"> Vandalism</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Arson"> Arson</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Extortion"> Extortion</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Shoplifting"> Shoplifting</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Trespassing"> Trespassing</label>
+        </div>
+        
+        <div class="p-2 border-t">
+            <strong class="block py-1">Crimes Against Persons</strong>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Murder"> Murder</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Homicide"> Homicide</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Assault and Battery"> Assault and Battery</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Rape"> Rape</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Sexual Harassment"> Sexual Harassment</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Domestic Abuse"> Domestic Abuse</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Child Abuse"> Child Abuse</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Kidnapping"> Kidnapping</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Stalking"> Stalking</label>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Human Trafficking"> Human Trafficking</label>
+        </div>
+        
+        <div class="p-2 border-t">
+            <strong class="block py-1">Other</strong>
+            <label class="block px-2 py-1 hover:bg-gray-100"><input type="checkbox" name="case_select" value="Other"> Other</label>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleDropdown() {
+    const dropdown = document.getElementById('caseSelect');
+    dropdown.classList.toggle('hidden');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+    const dropdown = document.getElementById('caseSelect');
+    const button = event.target.closest('button');
+    if (!button && !event.target.closest('#caseSelect')) {
+        dropdown.classList.add('hidden');
+    }
+});
+
+// Update selected cases display
+document.querySelectorAll('input[name="case_select"]').forEach(checkbox => {
+    checkbox.addEventListener('change', updateSelectedCases);
+});
+
+function updateSelectedCases() {
+    const selected = Array.from(document.querySelectorAll('input[name="case_select"]:checked'))
+        .map(cb => cb.value);
+    document.getElementById('selectedCases').textContent = selected.join(', ');
+}
+</script>
+
+
+<li class="mt-auto mb-5 hover:bg-neutral-500" onclick="profile.showModal()">
+    <div class="flex items-center pl-5 py-2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-8">
+            <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
+        </svg>
+        <h1 class="pl-5 text-lg">User Profile</h1>
+    </div>
+</li>
+</body>
+</html>

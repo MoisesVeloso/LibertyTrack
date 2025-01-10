@@ -1,0 +1,22 @@
+  <p class="font-semibold text-xl mb-10">Inmates</p>
+                    <div class="flex justify-center items-center">
+                        <?php
+                        require 'controllers/db_conn.php'; 
+
+                        $sql = "SELECT COUNT(*) AS inmate_count FROM inmates";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()) {
+                                echo "<p class='text-5xl font-bold'>" . $row["inmate_count"] . " Inmates</p>";
+                            }
+                        } else {
+                            echo "<p class='text-5xl'>0</p>";
+                        }
+                        $conn->close();
+                        ?>
+                    </div>
+
+
+
+                    
