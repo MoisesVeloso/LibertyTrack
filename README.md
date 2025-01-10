@@ -37,29 +37,8 @@ Dlib is a machine learning library used by `face_recognition` for facial recogni
   ```
 
 ---
-
-## Installation
-
-1. Clone the LibertyTrack repository:
-   ```bash
-   git clone <repository-url>
-   cd LibertyTrack
-   ```
-
-2. Install the required Python libraries:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Run the application:
-   ```bash
-   python app.py
-   ```
-
----
-
 ## Usage
-LibertyTrack ensures that only verified changes are applied to inmate data by using facial recognition technology. For detailed usage instructions, refer to the [User Guide](USER_GUIDE.md).
+LibertyTrack ensures that only verified changes are applied to inmate data by using facial recognition technology.
 
 ---
 
