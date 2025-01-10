@@ -65,7 +65,3 @@ If you encounter errors during installation or runtime, ensure that your environ
   ```
 
 ---
-
-## License
-This project is licensed under the [MIT License](LICENSE).
-
